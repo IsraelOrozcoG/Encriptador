@@ -11,22 +11,22 @@ let miTexto =(text) =>{
     let encriptado ="";
     do{
         if(texto[bandera]=="e"){
-        encriptado += 'enter';
+        encriptado +='enter';
         }
-        if(texto[bandera]=="i"){
-        encriptado += 'imes';
+        else if(texto[bandera]=="i"){
+        encriptado +='imes';
         }
-        if(texto[bandera]=="a"){
-        encriptado += 'ai';
+        else if(texto[bandera]=="a"){
+        encriptado +='ai';
         }
-        if(texto[bandera]=="o"){
-        encriptado += 'ober';
+        else if(texto[bandera]=="o"){
+        encriptado +='ober';
         }
-        if(texto[bandera]=="u"){
-        encriptado += 'ufat';
+        else if(texto[bandera]=="u"){
+        encriptado +='ufat';
         }
         else{
-        encriptado += text[bandera];
+        encriptado += texto[bandera];
         }
         
         bandera ++;
@@ -34,5 +34,24 @@ let miTexto =(text) =>{
     return encriptado;
 }
 
-let phrase ="Una gatita que le gusta el mambo";
+let desencriptar =(codigo)=>{
+    codigo=codigo.replace(/enter/g, "e");
+    console.log(codigo);
+    codigo=codigo.replace(/imes/g, "i");
+    console.log(codigo);
+    codigo=codigo.replace(/ai/g, "a");
+    console.log(codigo);
+    codigo=codigo.replace(/ober/g, "o");
+    console.log(codigo);
+    codigo=codigo.replace(/ufat/g, "u");
+
+    return codigo;
+
+}
+
+let phrase ="murcielago murcielago murcielago";
 console.log(miTexto(phrase))
+
+let mensajeEncriptado = miTexto(phrase);
+
+console.log(desencriptar(mensajeEncriptado));
