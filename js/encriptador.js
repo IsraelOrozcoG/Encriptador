@@ -5,35 +5,37 @@ La letra "a" es convertida para "ai"
 La letra "o" es convertida para "ober"
 La letra "u" es convertida para "ufat"
 */
+
+const text = document.getElementById('encriptar');
 let miTexto =(text) =>{
-    let texto = text;
+    
     let bandera = 0;
     let encriptado ="";
     do{
-        if(texto[bandera]=="e"){
+        if(text[bandera]=="e"){
         encriptado +='enter';
         }
-        else if(texto[bandera]=="i"){
+        else if(text[bandera]=="i"){
         encriptado +='imes';
         }
-        else if(texto[bandera]=="a"){
+        else if(text[bandera]=="a"){
         encriptado +='ai';
         }
-        else if(texto[bandera]=="o"){
+        else if(text[bandera]=="o"){
         encriptado +='ober';
         }
-        else if(texto[bandera]=="u"){
+        else if(text[bandera]=="u"){
         encriptado +='ufat';
         }
         else{
-        encriptado += texto[bandera];
+        encriptado += text[bandera];
         }
         
         bandera ++;
-    }while(texto.length != bandera)
+    }while(text.length != bandera)
     return encriptado;
 }
-
+/*
 let desencriptar =(codigo)=>{
     codigo=codigo.replace(/enter/g, "e");
     console.log(codigo);
@@ -47,11 +49,11 @@ let desencriptar =(codigo)=>{
 
     return codigo;
 
-}
+}*/
 
-let phrase ="murcielago murcielago murcielago";
-console.log(miTexto(phrase))
-
+//let phrase ="murcielago murcielago murcielago";
+//console.log(miTexto(text))
+/*
 let mensajeEncriptado = miTexto(phrase);
 
-console.log(desencriptar(mensajeEncriptado));
+console.log(desencriptar(mensajeEncriptado));*/
