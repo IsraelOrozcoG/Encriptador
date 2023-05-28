@@ -1,5 +1,5 @@
 *{
-    background-color: #0a3871ce;
+    background-color: #e5e5e5;
     box-sizing: border-box;
     margin: 0;
     padding: auto;
@@ -33,10 +33,20 @@ textarea {
     width: 70%;
     height: 550px;
     font-size: 20px;
-    color: gray;
+    color:  #0a3871;
+    border:1px solid #0a3871;
     padding: 5%;
   }
 
+  .resultado{
+    resize: none;
+    border-radius: 8px;
+    width: 70%;
+    height: 550px;
+    font-size: 20px;
+    color: gray;
+    padding: 5%;
+  }
   .mensaje{
     width: 90%;
   }
@@ -62,6 +72,6 @@ button:hover{
 
 .footer{
     width: 100%;
-    height: 10px;
-    
+    height: 120px;
+    background-color: #0a3871;
 }

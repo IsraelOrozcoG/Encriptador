@@ -6,7 +6,12 @@ La letra "o" es convertida para "ober"
 La letra "u" es convertida para "ufat"
 */
 
-const text = document.getElementById('encriptar');
+let botonEncriptar =document.querySelector('.boton-encriptar');
+let botonDesencriptar =document.querySelector('.boton-desencriptar');
+let textoEncriptado = document.querySelector('.textoEncriptado')
+let resultado = document.querySelector('.resultado');
+let cajaTexto = document.querySelector('.cajatexto');
+
 let miTexto =(text) =>{
     
     let bandera = 0;
@@ -35,25 +40,36 @@ let miTexto =(text) =>{
     }while(text.length != bandera)
     return encriptado;
 }
-/*
-let desencriptar =(codigo)=>{
-    codigo=codigo.replace(/enter/g, "e");
-    console.log(codigo);
-    codigo=codigo.replace(/imes/g, "i");
-    console.log(codigo);
-    codigo=codigo.replace(/ai/g, "a");
-    console.log(codigo);
-    codigo=codigo.replace(/ober/g, "o");
-    console.log(codigo);
-    codigo=codigo.replace(/ufat/g, "u");
+
+function recuperarTexto (){
+    let cajatexto= document.querySelector(".cajatexto");
+    return cajatexto.value;
+}
+
+function encriptado (){
+    let cajatexto = recuperarTexto();
+    resultado.textContent = miTexto(cajatexto);
+    
+}
+
+
+function desencriptar (codigo){
+    codigo=String(codigo).replace(/enter/g, "e");
+    //console.log(codigo);
+    codigo=String(codigo).replace(/imes/g, "i");
+    //console.log(codigo);
+    codigo=String(codigo).replace(/ai/g, "a");
+    //console.log(codigo);
+    codigo=String(codigo).replace(/ober/g, "o");
+    //console.log(codigo);
+    codigo=String(codigo).replace(/ufat/g, "u");
 
     return codigo;
 
-}*/
+}
 
-//let phrase ="murcielago murcielago murcielago";
-//console.log(miTexto(text))
-/*
-let mensajeEncriptado = miTexto(phrase);
 
-console.log(desencriptar(mensajeEncriptado));*/
+function desencriptado (){
+    let cajatexto = recuperarTexto();
+    resultado.textContent = desencriptar(cajatexto);
+}
