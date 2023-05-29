@@ -9,8 +9,10 @@ La letra "u" es convertida para "ufat"
 let botonEncriptar =document.querySelector('.boton-encriptar');
 let botonDesencriptar =document.querySelector('.boton-desencriptar');
 let textoEncriptado = document.querySelector('.textoEncriptado')
+let botonCopiar = document.querySelector('.boton-copiar')
 let resultado = document.querySelector('.resultado');
 let cajaTexto = document.querySelector('.cajatexto');
+let img = document.querySelector(".search-image")
 
 let miTexto =(text) =>{
     
@@ -48,6 +50,9 @@ function recuperarTexto (){
 
 function encriptado (){
     let cajatexto = recuperarTexto();
+    resultado.style.display = 'block';
+    botonCopiar.style.display = 'block';
+    img.style.display='none';
     resultado.textContent = miTexto(cajatexto);
     
 }
@@ -63,7 +68,6 @@ function desencriptar (codigo){
     codigo=String(codigo).replace(/ober/g, "o");
     //console.log(codigo);
     codigo=String(codigo).replace(/ufat/g, "u");
-
     return codigo;
 
 }

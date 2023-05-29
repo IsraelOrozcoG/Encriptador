@@ -58,10 +58,26 @@ button{
     width: 50%;
     height: 45px;
     border-radius: 8px;
+    background-color: #0a3871;
+    color:#e5e5e5
 }
 
 button:hover{
     background-color: gray;    
+}
+
+.search-image{
+    height: 550px;
+    width: 80%;
+}
+
+.boton-copiar{
+    display: none;
+}
+
+.resultado{
+    display: none;
+    border: 1px solid #0a3871;
 }
 
 .encriptado{
@@ -74,4 +90,12 @@ button:hover{
     width: 100%;
     height: 120px;
     background-color: #0a3871;
+}
+
+.footer > p{
+    background-color: #0a3871;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    font-size:26px;
 }
