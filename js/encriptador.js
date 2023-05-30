@@ -15,7 +15,9 @@ let cajaTexto = document.querySelector('.cajatexto');
 let img = document.querySelector(".search-image")
 
 let miTexto =(text) =>{
-    
+    if(text === null|| text == ''){
+        return '';
+    }
     let bandera = 0;
     let encriptado ="";
     do{
@@ -59,6 +61,9 @@ function encriptado (){
 
 
 function desencriptar (codigo){
+    if(codigo === null || codigo === ''){
+        return '';
+    }
     codigo=String(codigo).replace(/enter/g, "e");
     //console.log(codigo);
     codigo=String(codigo).replace(/imes/g, "i");
@@ -77,3 +82,10 @@ function desencriptado (){
     let cajatexto = recuperarTexto();
     resultado.textContent = desencriptar(cajatexto);
 }
+
+
+    botonCopiar.addEventListener("click", copiar = () => {
+    let contenido = document.querySelector(".resultado").textContent;
+    navigator.clipboard.writeText(contenido);
+    alert('Contenido copiado');
+    })

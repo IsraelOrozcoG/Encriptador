@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Encriptador</title>
 </head>
-<body>
+<body class="body">
     <div class="header">
         
     </div>
     <div class="main">
     <div class="texto">
         <textarea name="mensaje" id="encriptar" placeholder="Mi texto" class="cajatexto"></textarea>
+        <p class="advertencia">Solo letras minusculas</p>
         <div class = "botones">
         <button class="boton-encriptar" onclick="encriptado()">Encriptar</button>
         <button class="boton-desencriptar" onclick="desencriptado()">Desencriptar</button>
@@ -22,7 +23,7 @@
     <div class="encriptado">
     <img src="assets/explorer.png" alt="explorer" width="100%" class="search-image">
     <p class="resultado"></p>
-    <button class="boton-copiar" onclick="copiar()">Copiar</button>
+    <button class="boton-copiar" >Copiar</button>
     </div>
     </div>
     <div class="footer">
